@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">风起云涌2越南辅助工具</string>
+    <string name="title_home">列表</string>
+    <string name="title_dashboard">社区</string>
+    <string name="title_notifications">关于</string>
+    <string name="bafftle_key">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IjVlNTk0NDc3MDRjYTZmMWQiLCJpYXQiOjE1OTUwNzE0MjMsIm5iZiI6MTU5NTA3MTQyMywiaXNzIjoiaHR0cHM6Ly93d3cuYmF0dGxlbWV0cmljcy5jb20iLCJzdWIiOiJ1cm46dXNlcjoyMzYxOTAifQ.PNQBe48wK5KOM4VLPWsWZ8Nb95uNKEyFmf-9ZTEDpTs</string>
+    <string name="aboutus">此app使用了战网的api，用于向风起云涌2越南的玩家提供服务器信息支持，在这里感谢战网提供的api，祝您游戏愉快</string>
+</resources>
