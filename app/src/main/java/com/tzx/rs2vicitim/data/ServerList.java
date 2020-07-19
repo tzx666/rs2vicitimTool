@@ -1,14 +1,15 @@
 package com.tzx.rs2vicitim.data;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ServerList {
+public class ServerList implements Serializable {
     private List<Servers> data;
-    public static class Servers{
+    public static class Servers implements Serializable{
         private String type;
         private String id;
         private Server_Attributes attributes;
-        public static class Server_Attributes{
+        public static class Server_Attributes implements Serializable{
             private String id;
             private String name;
             private String address;
@@ -310,9 +311,9 @@ public class ServerList {
             }
         }
         private Server_relationships relationships;
-        public static class Server_relationships{
+        public static class Server_relationships implements Serializable{
             private Game game;
-            public static class Game{
+            public static class Game implements Serializable{
                 private ServerName data;
                 public static class ServerName{
                     private String type;

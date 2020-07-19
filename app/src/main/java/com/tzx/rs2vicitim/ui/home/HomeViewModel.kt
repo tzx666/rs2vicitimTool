@@ -29,6 +29,9 @@ class HomeViewModel : ViewModel() {
            serverlists.postValue(list.await())
         }
     }
+    fun getserver():LiveData<ServerList>{
+        return serverlists
+    }
     private fun getlist():ServerList{
         val client = OkHttpClient().newBuilder()
             .build()

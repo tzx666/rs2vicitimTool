@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tzx.rs2vicitim.R
@@ -39,6 +41,7 @@ class HomeFragment : Fragment() {
       //  layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         recyclerView.layoutManager = layoutManager
         adapter= serverItemAdapter(R.layout.serveritem,list)
+
         recyclerView.adapter=adapter
         adapter.recyclerView=recyclerView
         homeViewModel.GetServers()
@@ -47,6 +50,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter.setOnItemClickListener { adapter, view, position ->
+            view.findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToServerDetailItem(list.get(position)))
+        }
         homeViewModel.serverlist.observe(viewLifecycleOwner, Observer {
             it->
             Log.d("tzx", "onViewCreated: "+it.data.size)

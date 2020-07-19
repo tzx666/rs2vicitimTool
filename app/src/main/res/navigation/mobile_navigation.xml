@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.tzx.rs2vicitim.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_server_detail_item"
+            app:destination="@id/server_detail_item" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,13 @@
         android:name="com.tzx.rs2vicitim.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/server_detail_item"
+        android:name="com.tzx.rs2vicitim.ui.home.Server_detail_item"
+        android:label="server_detail_item_fragment"
+        tools:layout="@layout/server_detail_item_fragment" >
+        <argument
+            android:name="item"
+            app:argType="com.tzx.rs2vicitim.data.ServerList$Servers" />
+    </fragment>
 </navigation>
